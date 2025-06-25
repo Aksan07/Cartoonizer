@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Advanced Image Cartoonization System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Advanced Image Cartoonization System</h1>
+        
+        <div class="algorithm-info">
+            <h3>🧠 Advanced Computer Vision Algorithms Used:</h3>
+            <p><strong>1. Bilateral Filtering:</strong> Edge-preserving smoothing that reduces noise while keeping edges sharp</p>
+            <p><strong>2. Adaptive Thresholding:</strong> Dynamic edge detection that adapts to local image characteristics</p>
+            <p><strong>3. K-Means++ Clustering:</strong> Advanced color quantization for cartoon-like color reduction</p>
+            <p><strong>4. Morphological Operations:</strong> Edge refinement using mathematical morphology</p>
+            <p><strong>5. Multi-scale Processing:</strong> Pyramid-based processing for better detail preservation</p>
+        </div>
+
+        <div class="upload-section">
+            <h2>📁 Select Your Image</h2>
+            <p style="margin: 15px 0; color: #666;">Choose an image file (JPG, PNG, GIF, BMP)</p>
+            <input type="file" id="imageInput" class="file-input" accept="image/*">
+            <label for="imageInput" class="upload-btn">Choose Image File</label>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="algorithm">🔬 Algorithm Method:</label>
+                <select id="algorithm">
+                    <option value="hybrid">Hybrid Advanced (Recommended)</option>
+                    <option value="bilateral">Bilateral Filter Focus</option>
+                    <option value="kmeans">K-Means Focus</option>
+                    <option value="edge">Edge Enhancement</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="colorReduction">🎨 Color Levels:</label>
+                <input type="range" id="colorReduction" min="4" max="16" value="8" step="1">
+                <span id="colorValue">8 colors</span>
+            </div>
+
+            <div class="control-group">
+                <label for="edgeIntensity">✏️ Edge Intensity:</label>
+                <input type="range" id="edgeIntensity" min="1" max="15" value="7" step="1">
+                <span id="edgeValue">7</span>
+            </div>
+
+            <div class="control-group">
+                <label for="smoothness">🌊 Smoothness:</label>
+                <input type="range" id="smoothness" min="5" max="25" value="15" step="1">
+                <span id="smoothValue">15</span>
+            </div>
+        </div>
+
+        <button id="processBtn" class="process-btn" disabled>🚀 Apply Cartoonization</button>
+
+        <div class="progress" style="display: none;">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div class="status"></div>
+        <div id="results" class="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
