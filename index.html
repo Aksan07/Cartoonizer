@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Advanced Image Cartoonization System</title>
+    <title>Image Cartoonization System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>🎨 Advanced Image Cartoonization System</h1>
+        <h1>🎨 Image Cartoonization System</h1>
         
         <div class="algorithm-info">
-            <h3>🧠 Advanced Computer Vision Algorithms Used:</h3>
+            <h3>🧠 Computer Vision Algorithms Used:</h3>
             <p><strong>1. Bilateral Filtering:</strong> Edge-preserving smoothing that reduces noise while keeping edges sharp</p>
-            <p><strong>2. Fast Gradient Detection:</strong> Lightweight edge detection using horizontal and vertical intensity changes to highlight strong outlines with a threshold</p>
-            <p><strong>3. Adaptive Thresholding:</strong> Dynamic edge detection that adapts to local image characteristics</p>
-            <p><strong>4. K-Means++ Clustering:</strong> Advanced color quantization for cartoon-like color reduction</p>
+            <p><strong>2. Sobel Gradient Detection:</strong>Detects edges using horizontal and vertical gradients via the Sobel operator. Good for capturing clear outlines of facial features, hair, and object contours.</p>
+            <p><strong>3. K-Means++ Clustering:</strong> Advanced color quantization for cartoon-like color reduction</p>
         </div>
 
         <div class="upload-section">
@@ -32,7 +31,7 @@
                     <option value="hybrid">Hybrid Advanced (Recommended)</option>
                     <option value="bilateral">Bilateral Filter Focus</option>
                     <option value="kmeans">K-Means Focus</option>
-                    <option value="edge">Edge Enhancement</option>
+                    <option value="edge">Sobel Focus</option>
                 </select>
             </div>
 
